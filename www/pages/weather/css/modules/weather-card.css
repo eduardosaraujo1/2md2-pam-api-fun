@@ -1,0 +1,80 @@
+.weather-card {
+    font-family: Ubuntu, system-ui, -apple-system, BlinkMacSystemFont,
+        'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue',
+        sans-serif;
+    background: linear-gradient(#7282f7, #8ac8f5);
+    color: white;
+    border-radius: 12px;
+}
+
+.weather-card--dark {
+    background: linear-gradient(#444855, #1b1d23);
+}
+
+.weather-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    min-width: 13rem;
+    padding-block: 1rem 0.5rem;
+    padding-inline: 3rem;
+}
+
+.weather-card__city {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.weather-card__city img {
+    height: 2rem;
+}
+
+.weather-card__icon img {
+    width: 8rem;
+}
+
+.weather-info__temperature {
+    display: flex;
+    align-items: flex-start;
+    font-size: 3rem;
+    padding-left: 0.5rem;
+}
+
+.weather-measure-unit {
+    color: hsl(0, 0%, 94%);
+    opacity: 0.6;
+}
+
+.weather-info__temperature .weather-measure-unit {
+    font-size: 0.7em;
+    font-weight: 400;
+}
+
+.weather-info__description {
+    text-transform: capitalize;
+    margin-top: -1rem;
+}
+
+.weather-card__info-secondary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.weather-info__wind,
+.weather-info__humidity {
+    display: flex;
+    align-items: center;
+}
+
+.secondary-info-data {
+    font-size: 2rem;
+}
+
+.weather-info__title {
+    font-size: 0.8em;
+}
