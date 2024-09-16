@@ -35,8 +35,6 @@
         <link rel="stylesheet" href="./css/basic/reset.css" />
         <link rel="stylesheet" href="./css/modules/weather-card.css" />
         <link rel="stylesheet" href="./css/layout/form.css" />
-        <script src="./js/auth.js"></script>
-        <script src="./js/weather.js"></script>
     </head>
     <body>
         <div class="container">
@@ -222,7 +220,10 @@
                     </form>
                 </div>
                 <div class="weather-card-wrapper">
-                    <div class="weather-card weather-card--hide-all">
+                    <div class="weather-card weather-card--error">
+                        <span class="card-error-message"
+                            >Nenhuma cidade foi selecionada</span
+                        >
                         <div class="weather-card__city">
                             <img
                                 src="./image/64.png"
@@ -272,12 +273,14 @@
             id="keyContainer"
             placeholder="API Key"
         />
-        <span class="key-container-tip">SHIFT + x</span>
+        <span class="key-container-tip">Ver API Key</span>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"
         ></script>
+        <script src="./js/auth.js"></script>
+        <script src="./js/weather.js"></script>
         <script src="./js/cities.js"></script>
         <script src="./js/form.js"></script>
     </body>

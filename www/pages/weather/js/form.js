@@ -32,7 +32,7 @@ function load() {
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
 
-        await hideCard();
+        await resetCard();
         const data = new FormData(form);
         const city = data.get('city-select');
         const country = data.get('country-select');
@@ -41,9 +41,9 @@ function load() {
     });
 }
 
-async function hideCard() {
+async function resetCard() {
     card.classList.add('weather-card--hide');
-    card.classList.remove('weather-card--hide-all');
+    card.classList.remove('weather-card--error');
     return new Promise((resolve) => {
         setTimeout(resolve, 200);
     });
@@ -51,7 +51,6 @@ async function hideCard() {
 
 async function showCard() {
     card.classList.remove('weather-card--hide');
-    card.classList.remove('weather-card--hide-all');
     return new Promise((resolve) => {
         setTimeout(resolve, 200);
     });

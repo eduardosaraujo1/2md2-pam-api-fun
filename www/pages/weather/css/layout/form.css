@@ -36,7 +36,7 @@ body {
 
 .city-selection {
     background-color: #d8dfe0;
-    box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* shame.css */
@@ -45,8 +45,25 @@ body {
     right: 0;
     bottom: 0;
     transition: transform 0.2s linear;
+    width: clamp(15%, 50vw + 1rem, 20rem);
 }
 
 .key-container--hide {
     transform: translateX(100%);
+}
+
+.key-container-tip {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+    width: fit-content;
+    padding: 1rem 1rem 0 0;
+    user-select: none;
+}
+
+@media screen and (width < 500px) {
+    .container__wrapper {
+        flex-direction: column;
+    }
 }

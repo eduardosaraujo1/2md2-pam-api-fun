@@ -8,8 +8,12 @@ function toggleKeyInput(action) {
         keycontainer.classList.toggle('key-container--hide');
     }
 }
+
 window.addEventListener('keydown', (event) => {
     if (['x', 'k'].includes(event.key.toLowerCase()) && event.shiftKey) {
         toggleKeyInput();
     }
 });
+
+const keyContainerTip = document.querySelector('.key-container-tip');
+keyContainerTip.addEventListener('click', toggleKeyInput);
