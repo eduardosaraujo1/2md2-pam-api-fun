@@ -8,10 +8,14 @@ const form = document.querySelector('form');
  */
 function arrayToOptionList(array) {
     let html = '';
-    let treatedOption;
     for (const option of array) {
-        treatedOption = option.toLowerCase();
-        const node = `<option value="${treatedOption}">${option}</option>\n`;
+        const treatedOption = option.toLowerCase();
+        let node;
+        if (treatedOption.includes('mongagua')) {
+            node = `<option selected value="${treatedOption}">${option}</option>\n`;
+        } else {
+            node = `<option value="${treatedOption}">${option}</option>\n`;
+        }
         html += node;
     }
     return html;
