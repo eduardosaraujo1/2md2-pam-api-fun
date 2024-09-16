@@ -13,8 +13,43 @@
         <script src="/cordova.js"></script>
         <link rel="stylesheet" href="/components/loader.css" />
         <script src="/components/loader.js"></script>
+        <style>
+            ul,
+            ol {
+                list-style: none;
+            }
+            :root {
+                font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                    'Helvetica Neue', sans-serif;
+            }
+            li,
+            li a {
+                color: black;
+                text-decoration: none;
+            }
+            li:not(.enabled) {
+                opacity: 0.3;
+            }
+        </style>
     </head>
     <body>
-        <a href="/pages/weather/index.html"></a>
+        <ul>
+            <li>
+                <a href="#">Tetr.IO (wip)</a>
+            </li>
+            <li>
+                <a href="#">Meme API</a>
+            </li>
+            <li>
+                <a href="#">NASA API</a>
+            </li>
+            <li>
+                <a href="#">JoJo API</a>
+            </li>
+            <li class="enabled">
+                <a href="/pages/weather/index.html">Weather API</a>
+            </li>
+        </ul>
     </body>
 </html>
