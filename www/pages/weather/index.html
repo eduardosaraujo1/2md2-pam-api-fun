@@ -42,42 +42,232 @@
         <!-- Custom css and js -->
         <link rel="stylesheet" href="./css/basic/reset.css" />
         <link rel="stylesheet" href="./css/modules/weather-card.css" />
+        <link rel="stylesheet" href="./css/layout/form.css" />
+        <script src="./js/auth.js"></script>
         <script src="./js/weather.js"></script>
     </head>
     <body>
         <div class="container">
-            <div class="weather-card">
-                <div class="weather-card__city">
-                    <img
-                        src="https://flagsapi.com/BR/flat/64.png"
-                        alt="country"
-                        id="country-flag"
-                    />
-                    <span id="city">Itanhaém, BR</span>
+            <div class="wrapper">
+                <div class="city-selection">
+                    <h1 class="form-title">Clima tempo</h1>
+                    <form id="city-form">
+                        <div class="input">
+                            <label for="country-select">País</label>
+                            <select
+                                name="country-select"
+                                id="country-select"
+                                class="form-select"
+                            >
+                                <option value="AF">Afeganistão</option>
+                                <option value="AL">Albânia</option>
+                                <option value="DZ">Argélia</option>
+                                <option value="AD">Andorra</option>
+                                <option value="AO">Angola</option>
+                                <option value="AG">Antígua e Barbuda</option>
+                                <option value="AR">Argentina</option>
+                                <option value="AM">Armênia</option>
+                                <option value="AW">Aruba</option>
+                                <option value="AU">Austrália</option>
+                                <option value="AT">Áustria</option>
+                                <option value="AZ">Azerbaijão</option>
+                                <option value="BS">Bahamas</option>
+                                <option value="BH">Bahrein</option>
+                                <option value="BD">Bangladesh</option>
+                                <option value="BB">Barbados</option>
+                                <option value="BY">Bielorrússia</option>
+                                <option value="BE">Bélgica</option>
+                                <option value="BZ">Belize</option>
+                                <option value="BO">Bolívia</option>
+                                <option value="BA">Bósnia e Herzegovina</option>
+                                <option value="BW">Botsuana</option>
+                                <option value="BR" selected>Brasil</option>
+                                <option value="BN">Brunei Darussalam</option>
+                                <option value="BG">Bulgária</option>
+                                <option value="KH">Camboja</option>
+                                <option value="CM">Camarões</option>
+                                <option value="CA">Canadá</option>
+                                <option value="KY">Ilhas Cayman</option>
+                                <option value="CL">Chile</option>
+                                <option value="CN">China</option>
+                                <option value="CO">Colômbia</option>
+                                <option value="CG">Congo</option>
+                                <option value="CR">Costa Rica</option>
+                                <option value="HR">Croácia</option>
+                                <option value="CU">Cuba</option>
+                                <option value="CY">Chipre</option>
+                                <option value="CZ">República Tcheca</option>
+                                <option value="DK">Dinamarca</option>
+                                <option value="DO">República Dominicana</option>
+                                <option value="EC">Equador</option>
+                                <option value="EG">Egito</option>
+                                <option value="SV">El Salvador</option>
+                                <option value="EE">Estônia</option>
+                                <option value="FO">Ilhas Feroé</option>
+                                <option value="FI">Finlândia</option>
+                                <option value="FR">França</option>
+                                <option value="PF">Polinésia Francesa</option>
+                                <option value="GA">Gabão</option>
+                                <option value="GE">Geórgia</option>
+                                <option value="DE">Alemanha</option>
+                                <option value="GH">Gana</option>
+                                <option value="GR">Grécia</option>
+                                <option value="GL">Groenlândia</option>
+                                <option value="GP">Guadalupe</option>
+                                <option value="GU">Guam</option>
+                                <option value="GT">Guatemala</option>
+                                <option value="GN">Guiné</option>
+                                <option value="HT">Haiti</option>
+                                <option value="JO">Jordânia</option>
+                                <option value="HN">Honduras</option>
+                                <option value="HK">Hong Kong</option>
+                                <option value="HU">Hungria</option>
+                                <option value="IS">Islândia</option>
+                                <option value="IN">Índia</option>
+                                <option value="ID">Indonésia</option>
+                                <option value="IR">Irã</option>
+                                <option value="IQ">Iraque</option>
+                                <option value="IE">Irlanda</option>
+                                <option value="IM">Ilha de Man</option>
+                                <option value="IL">Israel</option>
+                                <option value="IT">Itália</option>
+                                <option value="JM">Jamaica</option>
+                                <option value="JP">Japão</option>
+                                <option value="KZ">Cazaquistão</option>
+                                <option value="KE">Quênia</option>
+                                <option value="KW">Kuwait</option>
+                                <option value="LV">Letônia</option>
+                                <option value="LB">Líbano</option>
+                                <option value="LY">Líbia</option>
+                                <option value="LI">Liechtenstein</option>
+                                <option value="LU">Luxemburgo</option>
+                                <option value="MK">Macedônia do Norte</option>
+                                <option value="MG">Madagáscar</option>
+                                <option value="MY">Malásia</option>
+                                <option value="MT">Malta</option>
+                                <option value="MQ">Martinica</option>
+                                <option value="MU">Maurício</option>
+                                <option value="YT">Mayotte</option>
+                                <option value="MX">México</option>
+                                <option value="MN">Mongólia</option>
+                                <option value="ME">Montenegro</option>
+                                <option value="MA">Marrocos</option>
+                                <option value="MZ">Moçambique</option>
+                                <option value="MM">Mianmar</option>
+                                <option value="NA">Namíbia</option>
+                                <option value="NP">Nepal</option>
+                                <option value="NL">Países Baixos</option>
+                                <option value="NC">Nova Caledônia</option>
+                                <option value="NZ">Nova Zelândia</option>
+                                <option value="NI">Nicarágua</option>
+                                <option value="NG">Nigéria</option>
+                                <option value="NO">Noruega</option>
+                                <option value="OM">Omã</option>
+                                <option value="PK">Paquistão</option>
+                                <option value="PS">Palestina</option>
+                                <option value="PA">Panamá</option>
+                                <option value="PG">Papua-Nova Guiné</option>
+                                <option value="PY">Paraguai</option>
+                                <option value="PE">Peru</option>
+                                <option value="PH">Filipinas</option>
+                                <option value="PL">Polônia</option>
+                                <option value="PT">Portugal</option>
+                                <option value="PR">Porto Rico</option>
+                                <option value="KR">Coreia do Sul</option>
+                                <option value="LT">Lituânia</option>
+                                <option value="MD">Moldávia</option>
+                                <option value="RO">Romênia</option>
+                                <option value="RU">Federação Russa</option>
+                                <option value="LC">Santa Lúcia</option>
+                                <option value="SM">San Marino</option>
+                                <option value="SA">Arábia Saudita</option>
+                                <option value="SN">Senegal</option>
+                                <option value="RS">Sérvia</option>
+                                <option value="SG">Singapura</option>
+                                <option value="SK">Eslováquia</option>
+                                <option value="SI">Eslovênia</option>
+                                <option value="ZA">África do Sul</option>
+                                <option value="ES">Espanha</option>
+                                <option value="LK">Sri Lanka</option>
+                                <option value="SD">Sudão</option>
+                                <option value="SR">Suriname</option>
+                                <option value="SZ">Eswatini</option>
+                                <option value="SE">Suécia</option>
+                                <option value="CH">Suíça</option>
+                                <option value="TW">Taiwan</option>
+                                <option value="TZ">Tanzânia</option>
+                                <option value="TH">Tailândia</option>
+                                <option value="TT">Trinidad e Tobago</option>
+                                <option value="TN">Tunísia</option>
+                                <option value="TR">Turquia</option>
+                                <option value="VI">Ilhas Virgens, EUA</option>
+                                <option value="UA">Ucrânia</option>
+                                <option value="AE">
+                                    Emirados Árabes Unidos
+                                </option>
+                                <option value="GB">Reino Unido</option>
+                                <option value="US">
+                                    Estados Unidos da América
+                                </option>
+                                <option value="UY">Uruguai</option>
+                                <option value="VE">Venezuela</option>
+                                <option value="VN">Vietnã</option>
+                                <option value="ZM">Zâmbia</option>
+                                <option value="ZW">Zimbábue</option>
+                            </select>
+                        </div>
+                        <div class="input">
+                            <label for="city-select">Cidade</label>
+                            <select
+                                class="form-select"
+                                name="city-select"
+                                id="city-select"
+                            ></select>
+                        </div>
+                        <button class="btn btn-primary" type="submit">
+                            Obter clima
+                        </button>
+                    </form>
                 </div>
-                <div class="weather-card__icon">
-                    <img
-                        src="http://openweathermap.org/img/wn/01d@4x.png"
-                        alt="weather-icon"
-                    />
-                </div>
-                <div class="weather-info__temperature">
-                    <span class="primary-info-data" id="temperature">99</span
-                    ><span class="weather-measure-unit">ºC</span>
-                </div>
-                <div class="weather-info__description">nublado</div>
-                <div class="weather-card__info-secondary">
-                    <span class="weather-info__title">Vento</span>
-                    <span class="weather-info__title">Umidade</span>
-                    <div class="weather-info__wind">
-                        <span class="secondary-info-data" id="wind">99</span>
-                        <span class="weather-measure-unit">km/h</span>
-                    </div>
-                    <div class="weather-info__humidity">
-                        <span class="secondary-info-data" id="humidity"
-                            >99</span
-                        >
-                        <span class="weather-measure-unit">%</span>
+                <div class="weather-card-wrapper">
+                    <div class="weather-card">
+                        <div class="weather-card__city">
+                            <img src="" alt="country-flag" id="country-flag" />
+                            <span id="city"></span>
+                        </div>
+                        <div class="weather-card__icon">
+                            <!-- src="http://openweathermap.org/img/wn/01d@4x.png" -->
+                            <img alt="weather-icon" id="icon" />
+                        </div>
+                        <div class="weather-info__temperature">
+                            <span
+                                class="primary-info-data"
+                                id="temperature"
+                            ></span
+                            ><span class="weather-measure-unit">ºC</span>
+                        </div>
+                        <div
+                            class="weather-info__description"
+                            id="description"
+                        ></div>
+                        <div class="weather-card__info-secondary">
+                            <span class="weather-info__title">Vento</span>
+                            <span class="weather-info__title">Umidade</span>
+                            <div class="weather-info__wind">
+                                <span
+                                    class="secondary-info-data"
+                                    id="wind"
+                                ></span>
+                                <span class="weather-measure-unit">km/h</span>
+                            </div>
+                            <div class="weather-info__humidity">
+                                <span
+                                    class="secondary-info-data"
+                                    id="humidity"
+                                ></span>
+                                <span class="weather-measure-unit">%</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -87,6 +277,8 @@
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"
         ></script>
+        <script src="./js/cities.js"></script>
+        <script src="./js/form.js"></script>
     </body>
 </html>
 

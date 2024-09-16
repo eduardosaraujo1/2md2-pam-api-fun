@@ -78,3 +78,11 @@
 .weather-info__title {
     font-size: 0.8em;
 }
+
+.hide {
+    visibility: hidden;
+}
+
+#city {
+    text-transform: capitalize;
+}
