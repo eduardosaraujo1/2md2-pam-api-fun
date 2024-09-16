@@ -7,7 +7,7 @@ Projeto website com multiplos usos de APIs (parecido com neal.fun). É planejado
     -   [Documentação](https://publicapis.io/meme-generator-media-api)
 -   [NASA API](https://api.nasa.gov/)
 -   [JoJo API](https://jojos-bizarre-api.netlify.app/)
--   [Weather API](https://weatherstack.com/)
+-   [Weather API](https://openweathermap.org/)
 
 # Integrantes
 
@@ -16,3 +16,6 @@ Projeto website com multiplos usos de APIs (parecido com neal.fun). É planejado
 -   Roberto Bucharelli
 -   Maria Eduarda
 -   Eduardo Soares
+
+# Roadmap
+- Estruturar a tela de catalogo de todos os aplicativos
