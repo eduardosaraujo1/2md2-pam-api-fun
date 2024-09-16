@@ -1,6 +1,8 @@
 class OpenWeather {
-    constructor(key) {
-        this.key = key;
+    getKey() {
+        const keycontainer = document.getElementById('keyContainer');
+        const value = keycontainer.value;
+        return value.replace(/[^0-9a-f]/g, '').toLowerCase();
     }
 
     async sendRequest(url) {
@@ -32,7 +34,7 @@ class OpenWeather {
             'https://api.openweathermap.org/data/2.5/weather?lang=pt_br&units=metric';
         const url = new URL(baseurl);
         url.searchParams.append('q', query);
-        url.searchParams.append('appid', this.key);
+        url.searchParams.append('appid', this.getKey());
 
         const result = await this.sendRequest(url);
         const weatherObj = {};
@@ -73,4 +75,4 @@ async function loadWeatherDefinition(city, country) {
     displayWeather(w);
 }
 
-const weather = new OpenWeather(OPEN_WEATHER_KEY);
+const weather = new OpenWeather();

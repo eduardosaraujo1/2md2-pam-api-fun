@@ -91,3 +91,11 @@
 #city {
     text-transform: capitalize;
 }
+
+.key-container-tip {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0.2;
+    z-index: -1;
+}

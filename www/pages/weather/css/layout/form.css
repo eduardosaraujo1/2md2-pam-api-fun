@@ -1,3 +1,6 @@
+:root {
+    overflow-x: clip; /* required for the hidden input */
+}
 body {
     height: 100svh;
 }
@@ -34,4 +37,16 @@ body {
 .city-selection {
     background-color: #d8dfe0;
     box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* shame.css */
+.key-container {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transition: transform 0.2s linear;
+}
+
+.key-container--hide {
+    transform: translateX(100%);
 }
