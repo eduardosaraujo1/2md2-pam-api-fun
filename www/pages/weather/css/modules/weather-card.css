@@ -4,7 +4,8 @@
         sans-serif;
     background: linear-gradient(#7282f7, #8ac8f5);
     color: white;
-    border-radius: 12px;
+    border-radius: 0 12px 12px 0;
+    transition: transform 0.4s ease;
 }
 
 .weather-card--dark {
@@ -19,6 +20,14 @@
     min-width: 13rem;
     padding-block: 1rem 0.5rem;
     padding-inline: 3rem;
+}
+
+.weather-card--hide-all > * {
+    visibility: hidden;
+}
+
+.weather-card--hide {
+    transform: translateX(-100%);
 }
 
 .weather-card__city {
@@ -77,10 +86,6 @@
 
 .weather-info__title {
     font-size: 0.8em;
-}
-
-.hide {
-    visibility: hidden;
 }
 
 #city {

@@ -1,3 +1,4 @@
+const card = document.querySelector('.weather-card');
 const countrySelect = document.querySelector('#country-select');
 const citySelect = document.querySelector('#city-select');
 const form = document.querySelector('form');
@@ -28,13 +29,31 @@ function load() {
     countrySelect.addEventListener('input', refreshCityList);
     refreshCityList();
 
-    form.addEventListener('submit', (event) => {
+    form.addEventListener('submit', async (event) => {
         event.preventDefault();
 
+        await hideCard();
         const data = new FormData(form);
         const city = data.get('city-select');
         const country = data.get('country-select');
-        loadWeatherDefinition(city, country);
+        await loadWeatherDefinition(city, country);
+        showCard();
+    });
+}
+
+async function hideCard() {
+    card.classList.add('weather-card--hide');
+    card.classList.remove('weather-card--hide-all');
+    return new Promise((resolve) => {
+        setTimeout(resolve, 200);
+    });
+}
+
+async function showCard() {
+    card.classList.remove('weather-card--hide');
+    card.classList.remove('weather-card--hide-all');
+    return new Promise((resolve) => {
+        setTimeout(resolve, 200);
     });
 }
 

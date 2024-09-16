@@ -48,7 +48,7 @@
     </head>
     <body>
         <div class="container">
-            <div class="wrapper">
+            <div class="container__wrapper">
                 <div class="city-selection">
                     <h1 class="form-title">Clima tempo</h1>
                     <form id="city-form">
@@ -224,47 +224,49 @@
                                 id="city-select"
                             ></select>
                         </div>
-                        <button class="btn btn-primary" type="submit">
+                        <button class="btn btn-primary mt-2" type="submit">
                             Obter clima
                         </button>
                     </form>
                 </div>
                 <div class="weather-card-wrapper">
-                    <div class="weather-card">
+                    <div class="weather-card weather-card--hide-all">
                         <div class="weather-card__city">
-                            <img src="" alt="country-flag" id="country-flag" />
-                            <span id="city"></span>
+                            <img
+                                src="https://flagsapi.com/BE/flat/64.png"
+                                alt="country-flag"
+                                id="country-flag"
+                            />
+                            <span id="city">Unknown</span>
                         </div>
                         <div class="weather-card__icon">
-                            <!-- src="http://openweathermap.org/img/wn/01d@4x.png" -->
-                            <img alt="weather-icon" id="icon" />
+                            <img
+                                src="http://openweathermap.org/img/wn/01d@4x.png"
+                                alt="weather-icon"
+                                id="icon"
+                            />
                         </div>
                         <div class="weather-info__temperature">
-                            <span
-                                class="primary-info-data"
-                                id="temperature"
-                            ></span
+                            <span class="primary-info-data" id="temperature"
+                                >00</span
                             ><span class="weather-measure-unit">ºC</span>
                         </div>
-                        <div
-                            class="weather-info__description"
-                            id="description"
-                        ></div>
+                        <div class="weather-info__description" id="description">
+                            Unknown
+                        </div>
                         <div class="weather-card__info-secondary">
                             <span class="weather-info__title">Vento</span>
                             <span class="weather-info__title">Umidade</span>
                             <div class="weather-info__wind">
-                                <span
-                                    class="secondary-info-data"
-                                    id="wind"
-                                ></span>
+                                <span class="secondary-info-data" id="wind"
+                                    >0,0</span
+                                >
                                 <span class="weather-measure-unit">km/h</span>
                             </div>
                             <div class="weather-info__humidity">
-                                <span
-                                    class="secondary-info-data"
-                                    id="humidity"
-                                ></span>
+                                <span class="secondary-info-data" id="humidity"
+                                    >00</span
+                                >
                                 <span class="weather-measure-unit">%</span>
                             </div>
                         </div>

@@ -62860,10 +62860,6 @@ const cities = {
     ],
     US: [
         'Abbeville',
-        'Abbeville',
-        'Abbeville',
-        'Abbeville',
-        'Abbeville',
         'Abbotsford',
         'Abbott',
         'Abbottstown',
