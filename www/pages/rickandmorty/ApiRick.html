@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Api de Rick and morty</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>Pesquisador de Personagens</h1>
+
+        <div id="filtro">
+            <input type="text" id="nm_filtro" placeholder="Filtrar por Nome" />
+            <select id="status_filtro">
+                <optgroup label="Filtrar por Status">
+                    <option value="Alive">Vivo</option>
+                    <option value="Dead">Morto</option>
+                    <option value="unknown">Desconhecido</option>
+                </optgroup>
+            </select>
+
+            <div class="container">
+                <div id="characters"></div>
+            </div>
+        </div>
+    </body>
+
+    <script src="Script.js"></script>
+</html>
