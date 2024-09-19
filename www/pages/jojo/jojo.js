@@ -1,11 +1,12 @@
-const searchInput = document.querySelector(".search-input");
+const searchInput = document.querySelector('.search-input');
 function buildCard(character) {
-    const stand = character.abilities.split(",")[0];
+    const stand = character.abilities.split(',')[0];
     const html = `
         <img
             src="https://jojos-bizarre-api.netlify.app/assets/${character.image}"
             alt=""
             class="foto-jojo"
+            draggable="false"
         />
         <b>Nome:</b><span class="nome-jojo">${character.name}</span>
         <b>Habilidade:</b><span class="stand-jojo">${stand}</span>
@@ -13,10 +14,10 @@ function buildCard(character) {
         ><span class="nacionalidade-jojo">${character.nationality}</span>
     `;
 
-    const card = document.createElement("div");
-    card.classList.add("jojo-card");
+    const card = document.createElement('div');
+    card.classList.add('jojo-card');
     card.innerHTML = html;
-    const lista = document.querySelector(".lista");
+    const lista = document.querySelector('.lista');
     lista.appendChild(card);
 }
 
@@ -47,12 +48,12 @@ async function safeGetRequst(query) {
     }
 }
 
-async function apiSearch(query = "") {
+async function apiSearch(query = '') {
     const apiUrl = new URL(
-        "https://stand-by-me.herokuapp.com/api/v1/characters/query/query"
+        'https://stand-by-me.herokuapp.com/api/v1/characters/query/query'
     );
     const fixedQuery = query.trim().toLowerCase();
-    apiUrl.searchParams.append("name", fixedQuery);
+    apiUrl.searchParams.append('name', fixedQuery);
     return await safeGetRequst(apiUrl);
 }
 
@@ -64,8 +65,8 @@ function renderCards(cards) {
 
 async function runQuery() {
     const query = searchInput.value;
-    const list = document.querySelector(".lista");
-    list.innerHTML = "";
+    const list = document.querySelector('.lista');
+    list.innerHTML = '';
 
     const result = await apiSearch(query);
     if (Array.isArray(result)) {
@@ -76,7 +77,7 @@ async function runQuery() {
 }
 
 const runQueryDebounce = debounce(runQuery, 200);
-searchInput.addEventListener("input", () => {
+searchInput.addEventListener('input', () => {
     runQueryDebounce();
 });
 
