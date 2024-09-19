@@ -31,12 +31,19 @@
             crossorigin="anonymous"
         />
 
-        <!-- Custom css and js -->
+        <!-- Custom css -->
+        <link rel="stylesheet" href="../../assets/css/api-fun.css" />
         <link rel="stylesheet" href="./css/basic/reset.css" />
         <link rel="stylesheet" href="./css/modules/weather-card.css" />
         <link rel="stylesheet" href="./css/layout/form.css" />
     </head>
     <body>
+        <nav class="api-fun-nav navbar">
+            <a class="api-fun-mark" href="../home/index.html">API.Fun</a>
+            <span class="navbar__settings" id="settings"
+                ><i class="fa-solid fa-gear"></i
+            ></span>
+        </nav>
         <div class="container">
             <div class="container__wrapper">
                 <div class="city-selection">
@@ -273,7 +280,6 @@
             id="keyContainer"
             placeholder="API Key"
         />
-        <span class="key-container-tip">Ver API Key</span>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

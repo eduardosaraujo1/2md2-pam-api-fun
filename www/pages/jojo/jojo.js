@@ -1,4 +1,6 @@
 const searchInput = document.querySelector('.search-input');
+const spinner = document.querySelector('.lista .spin');
+const list = document.querySelector('.lista');
 function buildCard(character) {
     const stand = character.abilities.split(',')[0];
     const html = `
@@ -17,8 +19,7 @@ function buildCard(character) {
     const card = document.createElement('div');
     card.classList.add('jojo-card');
     card.innerHTML = html;
-    const lista = document.querySelector('.lista');
-    lista.appendChild(card);
+    list.appendChild(card);
 }
 
 /**
@@ -58,6 +59,7 @@ async function apiSearch(query = '') {
 }
 
 function renderCards(cards) {
+    list.innerHTML = '';
     for (const card of cards) {
         buildCard(card);
     }
@@ -65,8 +67,6 @@ function renderCards(cards) {
 
 async function runQuery() {
     const query = searchInput.value;
-    const list = document.querySelector('.lista');
-    list.innerHTML = '';
 
     const result = await apiSearch(query);
     if (Array.isArray(result)) {
@@ -74,6 +74,11 @@ async function runQuery() {
     } else {
         console.warn(`${result} não é um array`);
     }
+}
+
+function setSpinnerVisible(visible) {
+    const display = visible ? 'block' : 'hidden';
+    spinner.style.display = display;
 }
 
 const runQueryDebounce = debounce(runQuery, 200);

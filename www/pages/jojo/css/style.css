@@ -17,17 +17,24 @@ body {
     margin: 0;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 .container {
     display: flex;
     flex-direction: column;
     margin-inline: 3rem;
     padding-inline: 2rem;
-    height: 100%;
+    flex: 1;
     border: 5px solid #ff60dc;
     border-radius: 15px;
     background-color: rgba(127, 72, 228, 0.8);
     box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
     gap: 0.25rem;
+    margin-top: 1rem;
+    overflow: hidden;
 }
 
 .caixa-de-pesquisa {
@@ -67,11 +74,13 @@ h1 {
 }
 
 .lista {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
     padding-block: 1rem;
     overflow-y: auto;
     gap: 0.5rem;
+    flex-basis: 100%;
 }
 
 .jojo-card {
@@ -96,8 +105,28 @@ h1 {
     text-transform: capitalize;
 }
 
+.lista .spin {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1rem;
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+}
+
 @media (width < 684px) {
     .container {
         margin-inline: 4px;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }

@@ -15,5 +15,5 @@ window.addEventListener('keydown', (event) => {
     }
 });
 
-const keyContainerTip = document.querySelector('.key-container-tip');
-keyContainerTip.addEventListener('click', toggleKeyInput);
+const settingsIcon = document.querySelector('#settings');
+settingsIcon.addEventListener('click', toggleKeyInput);

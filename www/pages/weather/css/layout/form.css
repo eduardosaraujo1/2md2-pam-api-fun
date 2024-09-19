@@ -1,7 +1,10 @@
 :root {
     overflow-x: clip; /* required for the hidden input */
 }
+
 body {
+    display: flex;
+    flex-direction: column;
     height: 100svh;
 }
 
@@ -66,4 +69,12 @@ body {
     .container__wrapper {
         flex-direction: column;
     }
+}
+
+.navbar {
+    padding-inline: 1rem;
+}
+
+.navbar__settings i {
+    font-size: 1.3em;
 }

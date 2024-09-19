@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Playpen Sans';
+    src: url('../fonts/PlaypenSans-SemiBold.ttf');
+}
+
+.api-fun-nav {
+    background-color: #fff9db;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding-block: 0.35rem;
+    padding-inline: 0.5rem;
+}
+
+.api-fun-mark {
+    font-family: 'Playpen Sans';
+    font-size: 1.5em;
+    text-decoration: none;
+    /* box-shadow: 0 0 5px rgba(255, 215, 0, 0.6), 0 0 2px rgba(0, 0, 0, 0.6); */
+    --outline-color: #ffe69b;
+    text-shadow: -1px -1px 0 var(--outline-color),
+        1px -1px 0 var(--outline-color), -1px 1px 0 var(--outline-color),
+        1px 1px 0 var(--outline-color);
+    padding: 1px 4px;
+    color: black;
+}
