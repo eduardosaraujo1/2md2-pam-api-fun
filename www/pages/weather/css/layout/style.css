@@ -77,4 +77,5 @@ body {
 
 .navbar__settings i {
     font-size: 1.3em;
+    cursor: pointer;
 }
