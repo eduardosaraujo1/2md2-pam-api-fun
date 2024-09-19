@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pesquisador de Personagens</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #3f9adb;
+            }
+
+            h1 {
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            #filtro input,
+            #filtro #status_filtro {
+                padding: 8px 16px;
+                margin: 16px;
+                font-size: 18px;
+            }
+
+            .filter select {
+                padding: 10px;
+                font-size: 16px;
+                margin: 0 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .cards-container {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: wrap;
+                padding-inline: 1rem;
+            }
+
+            .card {
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                padding: 15px;
+                width: 200px;
+                text-align: center;
+            }
+
+            .card img {
+                width: 100%;
+                border-radius: 10px;
+                margin-bottom: 15px;
+            }
+
+            .card h2 {
+                margin-bottom: 10px;
+                font-size: 20px;
+                color: #333;
+            }
+
+            .card p {
+                margin-bottom: 5px;
+                font-size: 16px;
+            }
+        </style>
+        <link rel="stylesheet" href="../../assets/css/api-fun.css" />
+    </head>
+    <body>
+        <nav class="api-fun-nav">
+            <a class="api-fun-mark" href="../home/index.html">API.Fun</a>
+        </nav>
+        <br />
+        <strong><h1 style="color: gold; size: 100px">Galeria de Memes</h1></strong>
+        <br />
+        <div class="cards-container">
+            <div class="card">
+                <img
+                    src="https://apimeme.com/meme?meme=Advice-Dog&top=T%C3%A1+achando+que+n%C3%A3o+to+vendo&bottom=esse+pedacinho+de+carne+ai%3F"
+                    alt="Rainbow Dog"
+                />
+                <h2>Rainbow Dog</h2>
+                <p><strong>Status:</strong> Rainbow Pets</p>
+            </div>
+            <div class="card">
+                <img
+                    src="https://apimeme.com/meme?meme=Advice-Doge&top=Porque+Carambas&bottom=O+meu+dono+t%C3%A1+latindo%3F"
+                    alt="Rainbow Doge"
+                />
+                <h2>Rainbow Doge</h2>
+                <p><strong>Status:</strong> Rainbow Pets</p>
+            </div>
+            <div class="card">
+                <img src="https://i.imgflip.com/93zovk.jpg" alt="Rainbow Cat" />
+                <h2>Rainbow Cat</h2>
+                <p><strong>Status:</strong> Rainbow Pets</p>
+            </div>
+            <div class="card">
+                <img src="https://i.imgflip.com/93zz8x.jpg" alt="Albert Tongue" />
+                <h2>Albert Tongue</h2>
+                <p><strong>Status:</strong> Albert Einstein</p>
+            </div>
+            <div class="card">
+                <img
+                    src="https://apimeme.com/meme?meme=Albert-Einstein-1&top=lamento%2C+mas+diferente+de+voc%C3%AA&bottom=EU+SABO"
+                    alt="Albert Serious"
+                    sizes="200px"
+                /><br /><br /><br />
+                <h2>Albert Serious</h2>
+                <p><strong>Status:</strong> Albert Einstein</p>
+            </div>
+            <div class="card">
+                <img
+                    src="https://apimeme.com/meme?meme=Albert-Cagestein&top=Vejo+que+voc%C3%AAs+Conhecem&bottom=A+Teoria+da+Caveiravidade"
+                    alt="Albert Cage"
+                />
+                <h2>Albert Cage</h2>
+                <p><strong>Status:</strong> Albert Einstein</p>
+            </div>
+            <div class="card">
+                <img
+                    src="https://apimeme.com/meme?meme=Aaaaand-Its-Gone&top=N%C3%B3s+sabemos&bottom=Onde+isso+vai+terminar"
+                    alt="Sabemos"
+                    sizes="200px"
+                /><br /><br /><br /><br /><br />
+                <h2>Homem Sabido</h2>
+                <p><strong>Status:</strong> Others</p>
+            </div>
+            <div class="card">
+                <img src="https://apimeme.com/meme?meme=Charlie-Sheen-Derp&top=colocaram+sal&bottom=no+meu+p%C3%B3+de+cola" alt="Doido" />
+                <h2>Homem Cheiradão</h2>
+                <p><strong>Status:</strong> Others</p>
+            </div>
+            <div class="card">
+                <img src="https://i.imgflip.com/940g9l.jpg" alt="chatgpt" />
+                <h2>Suporte Informático</h2>
+                <p><strong>Status:</strong> Others</p>
+            </div>
+            <div class="card">
+                <img src="https://i.imgflip.com/940he2.jpg" alt="nunca-foi" /><br /><br /><br /><br /><br /><br />
+                <h2>Nunca Foi!</h2>
+                <p><strong>Status:</strong> Others</p>
+            </div>
+            <div class="card">
+                <img
+                    src="https://apimeme.com/meme?meme=Chainsaw-Bear&top=experimenta!+vai!&bottom=experimenta+mexer+no+meu+pudim!"
+                    alt="Experimenta"
+                />
+                <h2>EXPERIMENTA MEXER!</h2>
+                <p><strong>Status:</strong> Others</p>
+            </div>
+            <div class="card">
+                <img src="https://i.imgflip.com/940hzl.jpg" alt="Apreciador" /><br /><br /><br /><br />
+                <h2>Apreciador de Eletrônicos!</h2>
+                <p><strong>Status:</strong> Others</p>
+            </div>
+        </div>
+    </body>
+</html>
