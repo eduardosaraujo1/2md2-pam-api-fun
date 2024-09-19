@@ -13,67 +13,76 @@
         <script src="/cordova.js"></script>
         <link rel="stylesheet" href="/components/loader.css" />
         <script src="/components/loader.js"></script>
-        <!-- Fontes -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap"
-            rel="stylesheet"
-        />
-
         <!-- CSS -->
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/style.css" />
-        <style>
-            :root {
-                font-family: system-ui, -apple-system, BlinkMacSystemFont,
-                    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-                    "Helvetica Neue", sans-serif;
-            }
-            li,
-            li a {
-                color: black;
-                text-decoration: none;
-            }
-            .dead {
-                opacity: 0.3;
-            }
-        </style>
     </head>
     <body>
         <h1 class="header">API.FUN!</h1>
-        <h3 class="subheader">Teste a utilização de várias APIs</h3>
+        <h3 class="subheader">
+            Teste aplicativos que fazem o uso de diversas Web APIs
+        </h3>
         <div class="container">
-            <div class="card" id="weather-api">
-                <img
-                    src="./static/images/Weather.jpg"
-                    class="card-image"
-                    alt="Weather API"
-                />
-            </div>
+            <a
+                class="card"
+                id="weather-api"
+                style="--border-color: #008ecc"
+                href="../weather/index.html"
+            >
+                <div class="card-image-container">
+                    <img
+                        src="./static/images/Weather.jpg"
+                        class="card-image"
+                        alt="Weather API"
+                    />
+                </div>
+            </a>
+            <a
+                class="card"
+                id="jojo-api"
+                style="--border-color: #ddc33e"
+                href="../jojo/jojo.html"
+            >
+                <div class="card-image-container">
+                    <img
+                        src="./static/images/JoJo.jpeg"
+                        class="card-image"
+                        alt="JoJo API"
+                    />
+                </div>
+            </a>
+            <a
+                class="card"
+                id="rick-morty-api"
+                style="--border-color: #0190a0"
+                href="../rickandmorty/ApiRick.html"
+            >
+                <div class="card-image-container">
+                    <img
+                        src="./static/images/RickAndMorty.jpeg"
+                        class="card-image"
+                        alt="Weather API"
+                    />
+                </div>
+            </a>
+            <a class="card card--disabled" id="tetrio-api" href="#">
+                <div class="card-image-container">
+                    <img
+                        src="./static/images/unknown.png"
+                        class="card-image"
+                        alt="Weather API"
+                    />
+                </div>
+            </a>
+            <a class="card card--disabled" id="meme-api" href="#">
+                <div class="card-image-container">
+                    <img
+                        src="./static/images/unknown.png"
+                        class="card-image"
+                        alt="Weather API"
+                    />
+                </div>
+            </a>
         </div>
-        <!-- <ul>
-            <li>
-                <a href="../weather/index.html">Weather API</a>
-            </li>
-            <li>
-                <a href="../rickandmorty/ApiRick.html">Rick and Morty API</a>
-            </li>
-            <li>
-                <a href="../jojo/jojo.html">JoJo API</a>
-            </li>
-            <li class="dead">
-                <a href="#">Tetr.IO API</a>
-            </li>
-            <li class="dead">
-                <a href="#">Meme API</a>
-            </li>
-        </ul> -->
-        <script>
-            const weather = document.getElementById("weather-api");
-            weather.onclick = () => {
-                window.location.href = "../weather/index.html";
-            };
-        </script>
     </body>
 </html>
